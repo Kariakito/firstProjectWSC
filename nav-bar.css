@@ -1,0 +1,314 @@
+* {
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 100vh; */
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+/* main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.container {
+    max-width: 95%;
+    /* padding-left: 1.4rem;
+    padding-right: 1.4rem; */
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#navbar {
+    position: fixed;
+    height: 70px;
+    background-color: rgb(38, 38, 38);
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+.home-link,
+.navbar-link {
+    color: rgb(192, 191, 191);
+    /* transition: black; */
+    text-decoration: none;
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+    transition: black;
+}
+
+.home-link:focus,
+.home-link:hover {
+    color: rgb(148, 146, 146);
+}
+
+.navbar-link {
+    justify-content: center;
+    width: 100%;
+    padding: 0.4em 0.8em;
+    border-radius: 5px;    
+
+}
+
+.navbar-link:focus,
+.navbar-link:hover {
+    color: black;
+    background-color: rgb(148, 146, 146);
+} /*changes color of text and background once you hoover on links*/
+
+.navbar-logo img {     /* SPECIFICATIONS TO BE DEFINED ONCE LOGO IS INCLUDED!!!! */
+    width: 50px;
+    height: 55px;
+    margin-right: 15px;
+
+    filter: drop-shadow(1px 1px rgb(148, 146, 146))
+    drop-shadow(-1px 0 white); /*these 2 lines of code add frame to transparent picture logo, instead of the div/
+    /* filter: drop-shadow(1px 0 white) 
+    drop-shadow(-1px -1px 0 white); */
+}
+
+
+.navbar-toggle {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/* BURGER BUTTON SPECIFICATIONS BELOW*/ 
+
+
+.icon-bar {
+    display: block;
+    width: 25px;
+    height: 4px;
+    margin: 2px;
+    background-color: white;
+}
+
+.navbar-toggle:focus .icon-bar,
+.navbar-toggle:hover .icon-bar {
+    background-color: rgb(148, 146, 146);
+} /* changes color of burger once we hoover on it */
+
+#navbar.opened .navbar-toggle .icon-bar:first-child,
+#navbar.opened .navbar-toggle .icon-bar:last-child {
+    position: absolute;
+    margin: 0;
+    width: 30px;
+} 
+
+#navbar.opened .navbar-toggle .icon-bar:first-child {
+    transform: rotate(45deg);
+}
+
+#navbar.opened .navbar-toggle .icon-bar:nth-child(2) {
+    opacity: 0;
+} /* HIDES THE SECOND CHILD TO CREATE AN X INSTEAD OF A START (SECOND CHILD, SPAN TAG) */
+
+#navbar.opened .navbar-toggle .icon-bar:last-child {
+    transform: rotate(-45deg);
+} /* THE CODE ABOVE TAKES THE ICON-BAR SPAN TAGS AND SPECIFIES THEIR WIDTH, COLOR AND POSITION. 
+ONCE WE CLICK ON THEM THE ROTATE (TRANSFORM) BY 45 DEGREES, CREATING AN X*/
+
+
+#navbar-menu {
+    position: fixed;
+    top: 64px;
+    bottom: 0;
+    /* transition: rgb(189, 0, 0); */
+    opacity: 0;
+    visibility: hidden;
+    width: 30%;
+    box-sizing: border-box;
+
+}
+
+/* BURGER BUTTON END*/ 
+
+
+/* 
+#navbar-menu.sidebar,
+#navbar-menu.sidebar.left {
+    left: -1000px;
+    right: 0;
+}
+
+#navbar-menu.sidebar.right {
+    right: -1000px;
+    left: 0;
+} */
+
+#navbar-menu.detached{
+    left: 0;
+    right: 0;
+}
+
+#navbar.opened #navbar-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+#navbar.opened #navbar-menu.sidebar.left {
+    left: 0;
+}
+
+#navbar.opened #navbar-menu.sidebar.right {
+    right: 0;
+}
+
+.navbar-links { /* pop up box with burger links, color and specifications */
+    list-style-type: none;
+    /* max-height: 0; */
+    overflow: hidden;
+    position: absolute;
+    background-color: rgba(38, 38, 38, 0.95);;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 94vw;
+    margin-right: 5px;
+    box-sizing: border-box;
+} 
+
+#navbar.opened .navbar-links {
+    padding: 16px;
+    /* max-height: unset; unsets the max-height of an element, as it was inheriting the value from its parent element. We put element height to default */
+} 
+
+.sidebar .navbar-links {
+    top: 0;
+    bottom: 0;
+}
+
+.left.sidebar .navbar-links {
+    left: 0;
+    right: unset;
+    box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.right.sidebar .navbar-links {
+    right: 0;
+    left: unset;
+    box-shadow: -5px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.detached .navbar-links {
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+    width: 100vw;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-links {
+    left: 0;
+    right: 0;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+}
+
+.navbar-item {
+    margin: 10px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 720px) {
+    .navbar-toggle {
+        display: none;
+
+    }
+    
+    #navbar #navbar-menu,
+    #navbar.opened #navbar-menu {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+        display: block;
+        height: 100%;
+    }
+
+    #navbar .navbar-links,
+    #navbar.opened .navbar-links {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        position: static;
+        flex-direction: row;
+        list-style-type: none;
+        max-height: max-content;
+        width: 95%;
+        height: 100%;
+    }
+
+    #navbar .navbar-link:last-child {
+        margin-right: 5px;
+        padding-right: 0;
+    }
+}
+
+div.img-check{
+    width: 100%;
+}
+
+/* ////////////////////// FOOTER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+footer{
+    align-items: flex-end;
+    position: absolute;
+}
+
+#footer{
+        z-index:99;
+        /* position: absolute; */
+        left:0;
+        right:0;
+        bottom:0;
+        height: 70px;
+        background-color: rgb(38, 38, 38);
+        box-sizing: unset;
+        color: rgb(192, 191, 191);
+        margin: 0%;
+}
+
+nav.authors{
+    text-align: center;
+    padding-top: 7px;
+}
