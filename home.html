@@ -4,14 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./nav-bar.css">
+    <title>Venezuelan Food</title>
 </head>
 <body>
+    <header id="navbar">
+        <nav class="navbar-container container">
+          <a href="/" class="home-link">
+            <div class="navbar-logo">
+                <img src="./images/logo.webp" alt="">
+            </div>
+            Venezuelan Cook Book 
+          </a>
+          <button type="button" class="navbar-toggle">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <div id="navbar-menu" class="detached">
+            <ul class="navbar-links">
+              <li class="navbar-item"><a class="navbar-link" href="/about">Home</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="/blog">Form</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="/careers">Cook Book</a></li>
+            </ul>
+          </div>
+        </nav>
+    </header>
 
-    <!--Navbar-->
-
+    <main>
+      
+    </main>
     <!--Carousel-->
 
+    <div class="carousel">
+
+      <button class="carousel_button carousel_button--left">
+        <img src="https://img.icons8.com/ios-glyphs/50/000000/chevron-left.png"/>
+      </button>
+
+      <div class="carousel_track-conteiner"></div>
+
+      <ul class="carousel_track">
+
+        <li class="carousel_slide">
+          <img class="carousel_images" src="CopiadeImgVnzFood/caracasGuacanayas.png" alt="">
+        </li>
+        <li class="carousel_slide">
+          <img class="carousel_images" src="CopiadeImgVnzFood/arepas-solas1.jpeg" alt="">
+        </li>
+        <li class="carousel_slide">
+          <img class="carousel_images" src="CopiadeImgVnzFood/El-pabellón-criollo3.jpeg" alt="">
+        </li>
+        <li class="carousel_slide">
+          <img class="carousel_images" src="CopiadeImgVnzFood/cachapa-venezolana2.jpeg" alt="">
+        </li>
+        <li class="carousel_slide">
+          <img class="carousel_images" src="CopiadeImgVnzFood/dulce-de-lechosa1.jpeg" alt="">
+        </li>
+
+      </ul>
+
+      <button class="carousel_button carousel_button--right">
+        <img src="https://img.icons8.com/ios-glyphs/50/000000/chevron-right.png"/>  
+      </button>
+
+      <div class="carousel_nav">
+
+        <button class="carousel_indicator"></button>
+        <button class="carousel_indicator"></button>
+        <button class="carousel_indicator"></button>
+        <button class="carousel_indicator"></button>
+
+
+      </div>
+
+    </div>
+
+    
     <!--Introduction-->
 
     <!--Button to follow your Belly-->
@@ -21,6 +91,15 @@
     </a>
 
     <!--Footer-->
+    <footer id="footer" >
+      <nav class="authors">
+        Authors of the project: 
+        <br> Pilar, Anna, Marta
+      </nav>
+    </footer>
     
+    <script src="./nav-bar.js"></script>
+    <script src="js/carousel.js"></script>
+
 </body>
 </html>
