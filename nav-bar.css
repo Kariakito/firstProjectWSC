@@ -246,10 +246,6 @@ ONCE WE CLICK ON THEM THE ROTATE (TRANSFORM) BY 45 DEGREES, CREATING AN X*/
 
 
 
-
-
-
-
 @media screen and (min-width: 720px) {
     .navbar-toggle {
         display: none;
@@ -289,10 +285,10 @@ div.img-check{
 }
 
 /* ////////////////////// FOOTER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+align-items: flex-end;
+position: absolute;
 
 footer{
-    align-items: flex-end;
-    position: absolute;
 }
 
 #footer{
@@ -312,3 +308,5 @@ nav.authors{
     text-align: center;
     padding-top: 7px;
 }
+
+/* ////////////////////// FOOTER END \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */

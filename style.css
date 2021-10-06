@@ -1,69 +1,476 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////CAROUSEL///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
 .carousel {
-    position: relative;
-    height: 600px;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 70px;
-}
-
-.carousel_images {
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-}
-
-.carousel_track-container {
-    background-color: aquamarine;
+    overflow: hidden;
+    /* max-width: 600px; */
+    display: block;  
     height: 100%;
+    width: 100%;
     position: relative;
 }
+  
+  
+  .carousel .carousel__item,
+  .carousel .carousel__item--hidden {
+    display: none;
+  }
+  
+  .carousel .carousel__item img {
+    width: 100%;
+    /* max-width: 600px; */
+    height: auto;
+    object-fit: fill;
+  }
+  
+  .carousel .carousel__item--visible {
+    display: block;
+    animation: fadeVisibility 0.5s;
+  }
+  
+  .carousel .carousel__actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel .carousel__actions button {
+    border-radius: 50px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel .carousel__actions button#carousel__button--prev {
+    margin-left: 20px;
+    /* position:relative; */
+    /* margin-bottom: 500px; */
+  }
+  
+  .carousel .carousel__actions button#carousel__button--next {
+    margin-right: 20px;
+  }
+  
+  @keyframes fadeVisibility {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: opacity linear;
+    }
+  }
 
-.carousel_track {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+
+@media screen and (min-width: 720px){
+    .Container--Carousel{
+        height: 600px;
+    }
 }
 
-.carousel_slide {
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////NAVBAR START///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+  /* *{
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    width: 100%;
+    height: 100vh;
+    /* position: absolute; */
+}
+
+/* main {
+    width: 100%;
+} */
+
+/* main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.container {
+    max-width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#navbar {
+    position: relative;
+    height: 70px;
+    background-color: rgb(38, 38, 38);
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+.home-link,
+.navbar-link {
+    color: rgb(211, 208, 208);
+    /* transition: black; */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* .home-link:focus,
+.home-link:hover {
+    color: white;
+    font-weight: 600;
+} */
+
+.navbar-link {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 2px;
+    border-radius: 5px;
+    /* height: 10px; */
+    margin: unset;
+    font-size: 20px;
+}
+
+.navbar-link:focus,
+.navbar-link:hover {
+    color: white;
+    font-weight: 600;
+    background-color:  rgba(152, 205, 255, 0.5);;
+    /* height: 25px; */
+    /* width: 50px;
+    text-align: center; */
+}
+ /*changes color of text and background once you hoover on links*/
+
+.navbar-logo img {     /* SPECIFICATIONS TO BE DEFINED ONCE LOGO IS INCLUDED!!!! */
+    width: 50px;
+    height: 55px;
+    margin-right: 15px;
+
+    filter: drop-shadow(1px 1px rgb(148, 146, 146))
+    drop-shadow(-1px 0 white); /*these 2 lines of code add frame to transparent picture logo, instead of the div/
+    /* filter: drop-shadow(1px 0 white) 
+    drop-shadow(-1px -1px 0 white); */
+}
+
+
+.navbar-toggle {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/* BURGER BUTTON SPECIFICATIONS BELOW*/ 
+
+
+.icon-bar {
+    display: block;
+    width: 25px;
+    height: 4px;
+    margin: 2px;
+    background-color: white;
+}
+
+.navbar-toggle:focus .icon-bar,
+.navbar-toggle:hover .icon-bar {
+    background-color: rgb(148, 146, 146);
+} /* changes color of burger once we hoover on it */
+
+#navbar.opened .navbar-toggle .icon-bar:first-child,
+#navbar.opened .navbar-toggle .icon-bar:last-child {
     position: absolute;
+    margin: 0;
+    width: 30px;
+} 
+
+#navbar.opened .navbar-toggle .icon-bar:first-child {
+    transform: rotate(45deg);
+}
+
+#navbar.opened .navbar-toggle .icon-bar:nth-child(2) {
+    opacity: 0;
+} /* HIDES THE SECOND CHILD TO CREATE AN X INSTEAD OF A START (SECOND CHILD, SPAN TAG) */
+
+#navbar.opened .navbar-toggle .icon-bar:last-child {
+    transform: rotate(-45deg);
+} /* THE CODE ABOVE TAKES THE ICON-BAR SPAN TAGS AND SPECIFIES THEIR WIDTH, COLOR AND POSITION. 
+ONCE WE CLICK ON THEM THE ROTATE (TRANSFORM) BY 45 DEGREES, CREATING AN X*/
+
+
+#navbar-menu {
+    position: fixed;
+    top: 64px;
+    bottom: 0;
+    /* transition: rgb(189, 0, 0); */
+    opacity: 0;
+    visibility: hidden;
+    width: 35%;
+    box-sizing: border-box;
+    margin: 0;
+    /* height: 70px; */
+}
+
+/* BURGER BUTTON END*/ 
+
+
+/* 
+#navbar-menu.sidebar,
+#navbar-menu.sidebar.left {
+    left: -1000px;
+    right: 0;
+}
+
+#navbar-menu.sidebar.right {
+    right: -1000px;
+    left: 0;
+} */
+
+.detached{
+    z-index: 100;
+}
+
+#navbar-menu.detached{
+    left: 0;
+    right: 0;
+}
+
+#navbar.opened #navbar-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+#navbar.opened #navbar-menu.sidebar.left {
+    left: 0;
+}
+
+#navbar.opened #navbar-menu.sidebar.right {
+    right: 0;
+}
+
+.navbar-links { /* pop up box with burger links, color and specifications */
+    list-style-type: none;
+    /* max-height: 0; */
+    overflow: hidden;
+    background-color: rgba(38, 38, 38, 0.685);;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 94vw;
+    margin-right: 5px;
+    box-sizing: border-box;
+
+} 
+
+#navbar.opened .navbar-links {
+    padding: 16px;
+    /* max-height: unset; unsets the max-height of an element, as it was inheriting the value from its parent element. We put element height to default */
+    z-index: 100;
+
+} 
+
+.sidebar .navbar-links {
     top: 0;
     bottom: 0;
-    width: 80%; 
+
 }
 
-.carousel_button {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-background: transparent;
-border: 0;
-cursor: pointer;
+.left.sidebar .navbar-links {
+    left: 0;
+    right: unset;
+    box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.3);
+
 }
 
-.carousel_button--left {
-    left: -50px;
+.right.sidebar .navbar-links {
+    right: 0;
+    left: unset;
+    box-shadow: -5px 20px 20px rgba(0, 0, 0, 0.3);
 }
 
-.carousel_button--right {
-    right: -50% ;
-}
+/* .fix{
+    z-index: 100;
+;} */
 
-.carousel_button img {
-width: 10px;
-}
-
-.carousel_nav {
-    background-color: antiquewhite;
+.detached .navbar-links {
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+    width: 100vw;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    position: relative;
 }
 
-.carousel_indicator {
-    border: 0;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background: black;
-    margin: 0 10px;
+.navbar-links {
+    left: 0;
+    right: 0;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    /* position: relative; */
 }
+
+.navbar-item {
+    margin: 10px;
+    width: 100%;
+}
+
+
+
+@media screen and (min-width: 720px) {
+    .navbar-toggle {
+        display: none;
+
+    }
+    
+    #navbar #navbar-menu,
+    #navbar.opened #navbar-menu {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+        display: block;
+        height: 100%;
+    }
+
+    #navbar .navbar-links,
+    #navbar.opened .navbar-links {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        position: static;
+        flex-direction: row;
+        list-style-type: none;
+        max-height: max-content;
+        width: 95%;
+        height: 100%;
+
+    }
+
+    #navbar .navbar-link:last-child {
+        margin-right: 5px;
+        padding-right: 0;
+    }
+}
+
+div.img-check{
+    width: 100%;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////FOOTER START///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+#footer{
+        /* z-index:99; */
+        display: block;
+        z-index: 200;
+        height: 70px;
+        background-color: rgb(38, 38, 38);
+        /* box-sizing: unset; */
+        color: rgb(192, 191, 191);
+        align-items: flex-end;
+        width: 100%;
+        padding: 0;
+        position: relative;
+        bottom: 0;
+}
+
+nav.authors{
+    text-align: center;
+    padding-top: 7px;
+}
+
+/* ////////////////////// FOOTER END \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////MAIN //////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    font-size: 18px;
+}
+
+
+.question-home{
+    text-align: center;
+    border: 3px solid black;
+    box-shadow: 7px 8px rgba(92, 91, 91, 0.904);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+@media screen and (min-width:720px) {
+    .question-home{
+        width: 75%;
+    }
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////FORM BUTTON //////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.form-button{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.a-form-button{
+    background-color: rgba(117, 169, 218, 0.5);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    font-weight: 600;
+    box-shadow: 4px 4px black;
+}
+.a-form-button:hover{
+    background-color: rgb(36, 102, 141);
+    color: white;
+    font-weight: 700;
+}
+

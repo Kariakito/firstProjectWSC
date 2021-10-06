@@ -4,17 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Venezuelan Food</title>
 </head>
 <body>
-    <!--Navbar-->
+  <div class="wrapper">
+          <header id="navbar">
+              <nav class="navbar-container container">
+                <a href="/" class="home-link">
+                  <div class="navbar-logo">
+                      <img src="./images/parakeet_v.png" alt="">
+                  </div>
+                  Venezuelan Cook Book 
+                </a>
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="navbar-menu" class="detached">
+                  <ul class="navbar-links">
+                      <li class="navbar-item"><a class="navbar-link" href="./home.html">Home</a></li>
+                      <li class="navbar-item"><a class="navbar-link" href="./form.html">Form</a></li>
+                      <li class="navbar-item"><a class="navbar-link" href="./cookBookMain.html">Cook Book</a></li>
+                  </ul>
+                </div>
+              </nav>
+          </header>
 
-    <!--Veg Box-->
+          <!--Carousel-->
 
-    <!--Car Recepie 1-->
+          <div class="Container--Carousel">
 
-    <!--Car Recepie 2-->
+            <div class="carousel">
+                <div class="carousel__item carousel__item--visible">
+                    <img src="copiaDeImgVnzFood/caracasGuacanayas.png" />
+                </div>
+                <div class="carousel__item">
+                    <img src="copiaDeImgVnzFood/arepas-solas1.jpeg" />
+                </div>
+                <div class="carousel__item">
+                    <img src="copiaDeImgVnzFood/cachapa-venezolana2.jpeg" />
+                </div>
+                <div class="carousel__item">
+                    <img src="copiaDeImgVnzFood/quesillo-slice.jpeg" />
+                </div>
 
- <!--Footer-->
+                <div class="carousel__actions">
+                  <button id="carousel__button--prev" aria-label="Previous slide"><</button>
+                  <button id="carousel__button--next" aria-label="Next slide">></button>
+                </div>
+            </div>
+        
+          </div>
+
+        <main class="container">
+
+
+
+            <!--THE CARDS GO HERE
+            recipy 1, recipy 2-->
+
+
+
+
+          
+        </main>
+          
+
+<br>
+          <!--Footer-->
+          <footer id="footer">
+            <nav class="authors">
+              Authors of the project: 
+              <br> Pilar, Anna, Marta
+            </nav>
+          </footer>
+
+
+  </div> <!--this is a closing of the wrapper, don't delete-->
+    <script src="./nav-bar.js"></script>
+    <script src="newJSCarousel.js"></script>
+
 </body>
 </html>
