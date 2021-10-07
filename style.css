@@ -20,6 +20,8 @@
     height: 100%;
     width: 100%;
     position: relative;
+    object-fit:contain;
+
 }
   
   
@@ -31,8 +33,7 @@
   .carousel .carousel__item img {
     width: 100%;
     /* max-width: 600px; */
-    height: auto;
-    object-fit: fill;
+    height: 100%;
   }
   
   .carousel .carousel__item--visible {
@@ -101,6 +102,9 @@ body {
     line-height: 1.6;
     width: 100%;
     height: 100vh;
+    background-color:honeydew;
+    margin: 0 auto;
+    color: rgb(43, 50, 109);
     /* position: absolute; */
 }
 
@@ -124,7 +128,7 @@ body {
 #navbar {
     position: relative;
     height: 70px;
-    background-color: rgb(38, 38, 38);
+    background-color: rgb(3, 63, 99);
     left: 0;
     right: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
@@ -141,7 +145,7 @@ body {
 
 .home-link,
 .navbar-link {
-    color: rgb(211, 208, 208);
+    color: rgb(237, 241, 239);
     /* transition: black; */
     text-decoration: none;
     display: flex;
@@ -172,17 +176,19 @@ body {
 .navbar-link:hover {
     color: white;
     font-weight: 600;
-    background-color:  rgba(152, 205, 255, 0.5);;
+    background-color:  rgb(62, 115, 158);
+    border-radius: 10px;
     /* height: 25px; */
     /* width: 50px;
     text-align: center; */
 }
- /*changes color of text and background once you hoover on links*/
+ /*changes color of text and background once you hoover on links, both closed one and detached*/
 
 .navbar-logo img {     /* SPECIFICATIONS TO BE DEFINED ONCE LOGO IS INCLUDED!!!! */
     width: 50px;
     height: 55px;
-    margin-right: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
 
     filter: drop-shadow(1px 1px rgb(148, 146, 146))
     drop-shadow(-1px 0 white); /*these 2 lines of code add frame to transparent picture logo, instead of the div/
@@ -295,7 +301,7 @@ ONCE WE CLICK ON THEM THE ROTATE (TRANSFORM) BY 45 DEGREES, CREATING AN X*/
     list-style-type: none;
     /* max-height: 0; */
     overflow: hidden;
-    background-color: rgba(38, 38, 38, 0.685);;
+    background-color: rgba(3, 63, 99, 0.685);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -409,9 +415,9 @@ div.img-check{
         display: block;
         z-index: 200;
         height: 70px;
-        background-color: rgb(38, 38, 38);
+        background-color: rgb(3, 63, 99);
         /* box-sizing: unset; */
-        color: rgb(192, 191, 191);
+        color: rgb(237, 241, 239);
         align-items: flex-end;
         width: 100%;
         padding: 0;
@@ -421,7 +427,8 @@ div.img-check{
 
 nav.authors{
     text-align: center;
-    padding-top: 7px;
+    padding: 7px;
+    font-weight: 600;
 }
 
 /* ////////////////////// FOOTER END \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
@@ -432,22 +439,29 @@ nav.authors{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
     font-size: 18px;
+    text-align: center;
+    margin: 5px;
 }
 
 
 .question-home{
     text-align: center;
-    border: 3px solid black;
-    box-shadow: 7px 8px rgba(92, 91, 91, 0.904);
-    border-radius: 10px;
+    border: 3px solid rgb(42, 49, 117);
+    box-shadow: 7px 8px rgba(40, 28, 82, 0.904);
+    border-radius: 3px;
     padding: 15px;
+    background-color: rgb(62, 115, 158);
+    color: rgb(237, 241, 239);
+    text-shadow: 3px 3px rgb(44, 107, 97);
+    
 }
 
 @media screen and (min-width:720px) {
     .question-home{
-        width: 75%;
+        width: 80%;
+        margin: 30px;
+        padding: 30px;
     }
 }
 
@@ -456,21 +470,26 @@ nav.authors{
 .form-button{
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .a-form-button{
-    background-color: rgba(117, 169, 218, 0.5);
+    background-color: rgba(44, 107, 97);
     text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    color: black;
+    padding: 20px;
+    border-radius: 40px;
+    color: rgb(237, 241, 239);
     font-weight: 600;
-    box-shadow: 4px 4px black;
+    box-shadow: 5px 6px rgba(40, 28, 82, 0.904);    
+    font-size: 18px;
+    text-shadow: 2px 2px rgb(40, 28, 82) ;
 }
-.a-form-button:hover{
-    background-color: rgb(36, 102, 141);
+
+.a-form-button:hover,
+.a-form-button:focus{
+    background-color: rgb(62, 115, 158);
     color: white;
+    cursor: pointer;
     font-weight: 700;
 }
 
