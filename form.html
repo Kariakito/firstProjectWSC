@@ -4,37 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./formStyle.css">
+    <title>Venezuelan Food</title>
 </head>
 <body>
-    
-<!--Navbar-->
+  <div class="wrapper">
+        <header id="navbar">
+            <nav class="navbar-container container">
+            <a href="/" class="home-link">
+                <div class="navbar-logo">
+                    <img src="./images/parakeet_v.png" alt="">
+                </div>
+                Venezuelan Cook Book 
+            </a>
+            <button type="button" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div id="navbar-menu" class="detached">
+                <ul class="navbar-links">
+                    <li class="navbar-item"><a class="navbar-link" href="./home.html">Home</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="./form.html">Form</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="./cookBookMain.html">Cook Book</a></li>
+                </ul>
+            </div>
+            </nav>
+        </header>
 
-<!-- Follow your belly Box-->
 
-<!--Box formulary -->
+        <main class="formCss">
+            <div>
+                <h1>Follow your belly!</h1>
+            </div>
+        
+            <div>
+                <form>
+                    <div class="formQuestion">
+                        <h3>Fill me with Veggies!</h3>
+                        
+                        <div class="formButton">
+                            <!-- <button id="vegYes" type="button">Yes!</button>
+                            <button id="vegNo" type="button">No!</button> -->
+                            <img class="button" id="vegYes" src="./formIcons/yes_bw.png" alt="text" width="40" height="40">
+                            <img class="button" id="vegNo" src="./formIcons/no_bw.png" alt="text" width="40" height="40">
+                        </div>
+        
+                    </div>
+                    <div class="formQuestion">
+                        <h3>Let's have some meat!</h3>
+                        
+                        <div class="formButton">
+                            <!-- <button id="meatYes" type="button">Yes!</button>
+                            <button id="meatNo" type="button">No!</button> -->
+                            <img class="button" id="meatYes" src="./formIcons/yes_bw.png" alt="text" width="40" height="40">
+                            <img class="button" id="meatNo" src="./formIcons/no_bw.png" alt="text" width="40" height="40">
+                        </div>
+                    </div>
+                    <div class="formQuestion">
+                        <h3>There's always room for a dessert!</h3>
+                        
+                        <div class="formButton">
+                            <!-- <button id="desYes" type="button">Yes!</button>
+                            <button id="desNo" type="button">No!</button> -->
+                            <img class="button" id="desYes" src="./formIcons/yes_bw.png" alt="text" width="40" height="40">
+                            <img class="button" id="desNo" src="./formIcons/no_bw.png" alt="text" width="40" height="40">
+                        </div>    
+                    </div>
+                    <div>
+                        <button id="submitMenu" type="button">Show me my menu!</button>
+                    </div>
+                    <div id="formOutputDiv">
+                        <p>My menu:</p>
 
-    <form>
-        <div class="question one">
-            <h3>Question 1</h3>
-            <button type="button">Yes!</button>
-            <button type="button">No!</button>
-        </div>
-        <div class="question two">
-            <h3>Question 2</h3>
-            <button type="button">Yes!</button>
-            <button type="button">No!</button>
-        </div>
-        <div class="question three">
-            <h3>Question 3</h3>
-            <button type="button">Yes!</button>
-            <button type="button">No!</button>
-        </div>
-    </form>
+                    </div>
+                </form>
+            </div>
+        <!-- attribution: 
+        "Icon made by "author" from www.flaticon.com"
 
-<!--Buttons-->
+        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        -->    
+          
+        </main>
+          
 
- <!--Footer-->
+        <br>
+        <!--Footer-->
+        <footer id="footer">
+        <nav class="authors">
+            Authors of the project: 
+            <br> Pilar, Anna, Marta
+        </nav>
+        </footer>
+
+
+    </div> <!--this is a closing of the wrapper, don't delete-->
+
+    <script src="./nav-bar.js"></script>
+    <script src="formScript.js"></script>
 
 </body>
 </html>
