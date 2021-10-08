@@ -5,26 +5,23 @@
     box-sizing: border-box;
 }
 
-hr {
-    border-top: 1px solid red;
-  }
-
 h1 {
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    border: 3px solid green;
+    /* border: 3px solid green; */ 
     align-items: center;
     width: 100%;
+    height: 80vh;
 }
 
 .formQuestion {
-    border: 2px solid blue;
+    border: 3px solid rgb(3, 63, 99);
     border-radius: 25px;
     width:55%;
     margin: 5px;
@@ -32,11 +29,12 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: white;
 }
 
 @media only screen and (max-width: 768px) {
     .formQuestion #formOutputDiv {
-      width: 80%;
+      width: 90%;
     }
   }
 
@@ -58,7 +56,7 @@ h3 {
 }
 
 #formOutputDiv {
-    border: 2px solid purple;
+    border: 2px solid rgb(3, 63, 99);
     display: flex;
     flex-direction: column;
     width: 55%;
