@@ -4,105 +4,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./nav-bar.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
     <title>Venezuelan Food</title>
 </head>
 <body>
-    <header id="navbar">
-        <nav class="navbar-container container">
-          <a href="/" class="home-link">
-            <div class="navbar-logo">
-                <img src="./images/logo.webp" alt="">
+  <div class="wrapper">
+          <header id="navbar">
+              <nav class="navbar-container container">
+                <a href="./home.html" class="home-link">
+                  <div class="navbar-logo">
+                      <img src="./images/parakeet_v.png" alt="">
+                  </div>
+                  Venezuelan Cook Book 
+                </a>
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="navbar-menu" class="detached">
+                  <ul class="navbar-links">
+                      <li class="navbar-item"><a class="navbar-link" href="./home.html">Home</a></li>
+                      <li class="navbar-item"><a class="navbar-link" href="./form.html">Form</a></li>
+                      <li class="navbar-item"><a class="navbar-link" href="./cookBookMain.html">Cook Book</a></li>
+                  </ul>
+                </div>
+              </nav>
+          </header>
+
+          
+
+          <!-- <br>
+          <br><br><br> -->
+
+          <!--Carousel-->
+
+          <div class="Container--Carousel">
+
+            <div class="carousel">
+                <div class="carousel__item carousel__item--visible">
+                    <img src="copiaDeImgVnzFood/caracasGuacanayas.png" />
+                </div>
+                <div class="carousel__item">
+                    <img src="copiaDeImgVnzFood/arepas-solas1.jpeg" />
+                </div>
+                <div class="carousel__item">
+                    <img src="./CopiadeImgVnzFood/cachapa-final1.jpg"/>
+                </div>
+                <div class="carousel__item">
+                    <img src="copiaDeImgVnzFood/quesillo2.jpg" />
+                </div>
+
+                <div class="carousel__actions">
+                  <button id="carousel__button--prev" aria-label="Previous slide"><</button>
+                  <button id="carousel__button--next" aria-label="Next slide">></button>
+                </div>
             </div>
-            Venezuelan Cook Book 
-          </a>
-          <button type="button" class="navbar-toggle">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-          <div id="navbar-menu" class="detached">
-            <ul class="navbar-links">
-              <li class="navbar-item"><a class="navbar-link" href="/about">Home</a></li>
-              <li class="navbar-item"><a class="navbar-link" href="/blog">Form</a></li>
-              <li class="navbar-item"><a class="navbar-link" href="/careers">Cook Book</a></li>
-            </ul>
+        
           </div>
-        </nav>
-    </header>
 
-    <main>
+        <main class="container">
+          <!-- <h3 class="introduction">Did you know that Venezuela means little Venice? </h3>
+          
+          <p> -->
+
+            <div class="introduction">
+                <h2 class="question-home">WHAT COMES TO YOUR MIND WHEN YOU THINK OF VENEZUELAN DISH?</h2>
+                <h3>Maybe something...sweet? sour? or even cheese?!</h3>
       
-    </main>
+                <p> On this site you are going to get a small taste of Venezuelan food culture, and we will surely help you to find the answer to the question above! </p>
+                  
+                <p>Our website is for those who want to open up to a new food experiences, but also for those who miss their country and the homemade cooking.</p>
+      
+                <p>To make your search of ideal recipy easier, we created a short form, which will help you to follow your belly's desire (click button below).</p>
+            </div>
+          
+        </main>
+          
+          <!--Introduction-->
 
-    <br>
-
-    <!--Carousel-->
-
-    <div class="carousel">
-
-      <button class="carousel_button carousel_button--left">
-        <img src="https://img.icons8.com/ios-glyphs/50/000000/chevron-left.png"/>
-      </button>
-
-      <div class="carousel_track-conteiner"></div>
-
-      <ul class="carousel_track">
-
-        <li class="carousel_slide">
-          <img class="carousel_images" src="CopiadeImgVnzFood/caracasGuacanayas.png" alt="">
-        </li>
-        <li class="carousel_slide">
-          <img class="carousel_images" src="CopiadeImgVnzFood/arepas-solas1.jpeg" alt="">
-        </li>
-        <li class="carousel_slide">
-          <img class="carousel_images" src="CopiadeImgVnzFood/El-pabellón-criollo3.jpeg" alt="">
-        </li>
-        <li class="carousel_slide">
-          <img class="carousel_images" src="CopiadeImgVnzFood/cachapa-venezolana2.jpeg" alt="">
-        </li>
-        <li class="carousel_slide">
-          <img class="carousel_images" src="CopiadeImgVnzFood/dulce-de-lechosa1.jpeg" alt="">
-        </li>
-
-      </ul>
-
-      <button class="carousel_button carousel_button--right">
-        <img src="https://img.icons8.com/ios-glyphs/50/000000/chevron-right.png"/>  
-      </button>
-
-      <div class="carousel_nav">
-
-        <button class="carousel_indicator"></button>
-        <button class="carousel_indicator"></button>
-        <button class="carousel_indicator"></button>
-        <button class="carousel_indicator"></button>
+          <!--Button to follow your Belly-->
+        <div class="form-button">
+          <a href="form.html" >
+              <button class="a-form-button"> 
+                FOLLOW YOUR BELLY FORM
+              </button>
+          </a>
+        </div>
+<br>
+          <!--Footer-->
+          <footer id="footer">
+            <p class="p-footer">This web page was created by: </p> 
+            <nav class="authors">
+              <div>
+                  <p class="authors-person">Anna Jaksics
+                  <a href= "https://github.com/AnnaGH" >
+                  <i class="fab fa-github"></i></a>
+                  <a href="anna.jaksics@gmail.com">
+                  <i class="fas fa-envelope"></i></a></p>
+              </div>
+              <div>
+                <p class="authors-person">Marta Gaworek
+                <a href= "https://github.com/marta05" >
+                <i class="fab fa-github"></i></a>
+                <a href="martagaworek050@gmail.com">
+                <i class="fas fa-envelope"></i></a></p>
+              </div>
+              <div>
+                <p class="authors-person">Maria del Pilar Maestre Sanchez
+                <a href = "https://github.com/Kariakito">
+                <i class="fab fa-github"></i></a>
+                <a href="pilarmaestre@gmail.com">
+                <i class="fas fa-envelope"></i></a></p>
+              </div>
+            </nav>
+          </footer>
 
 
-      </div>
-
-    </div>
-
-    
-    <!--Introduction-->
-
-    <!--Button to follow your Belly-->
-
-    <a href="form.html">
-        <button>Follow your belly form :)</button>
-    </a>
-
-    <!--Footer-->
-    <footer id="footer" >
-      <nav class="authors">
-        Authors of the project: 
-        <br> Pilar, Anna, Marta
-      </nav>
-    </footer>
-    
+  </div>
     <script src="./nav-bar.js"></script>
-    <script src="js/carousel.js"></script>
+    <script src="newJSCarousel.js"></script>
 
 </body>
 </html>

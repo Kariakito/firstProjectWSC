@@ -115,3 +115,8 @@ h3 {
     font-size: medium;
 }
 
+#attribution {
+    display: flex;
+    text-align: center;
+}
+

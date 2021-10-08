@@ -4,19 +4,177 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleCards.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Venezuelan Food</title>
 </head>
 <body>
+  <div class="wrapper">
+          <header id="navbar">
+              <nav class="navbar-container container">
+                <a href="./home.html" class="home-link">
+                  <div class="navbar-logo">
+                      <img src="./images/parakeet_v.png" alt="">
+                  </div>
+                  Venezuelan Cook Book 
+                </a>
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="navbar-menu" class="detached">
+                  <ul class="navbar-links">
+                      <li class="navbar-item"><a class="navbar-link" href="./home.html">Home</a></li>
+                      <li class="navbar-item"><a class="navbar-link" href="./form.html">Form</a></li>
+                      <li class="navbar-item"><a class="navbar-link" href="./cookBookMain.html">Cook Book</a></li>
+                  </ul>
+                </div>
+              </nav>
+          </header>
 
-    <!--Navbar-->
+          <!--Carousel-->
 
-    <!--Meat Box-->
+          <div class="Container--Carousel">
 
-    <!--Car Recepie 1-->
+            <div class="carousel">
+              <div class="carousel__item carousel__item--visible">
+                  <img src="copiaDeImgVnzFood/caracasGuacanayas.png" />
+              </div>
+              <div class="carousel__item">
+                  <img src="copiaDeImgVnzFood/arepas-solas1.jpeg" />
+              </div>
+              <div class="carousel__item">
+                  <img src="./CopiadeImgVnzFood/cachapa-final1.jpg"/>
+              </div>
+              <div class="carousel__item">
+                  <img src="copiaDeImgVnzFood/quesillo2.jpg" />
+              </div>
 
-    <!--Car Recepie 2-->
+                <div class="carousel__actions">
+                  <button id="carousel__button--prev" aria-label="Previous slide"><</button>
+                  <button id="carousel__button--next" aria-label="Next slide">></button>
+                </div>
+            </div>
+        
+          </div>
 
- <!--Footer-->
+          <br>
+        
+
+        <main class="container">
+
+            <!--THE CARDS GO HERE
+            recipy 1, recipe 2-->
+
+            <div class="cardMeatContainer">
+
+              <div class="blog-post">
+                <div class="blog-post__img">
+                    <img src="CopiadeImgVnzFood/paellon-criollo-persona.jpeg" alt="arepa">
+                </div>
+                <div class="blog-post__info">
+                <div>
+                    <h1 class="blog-post__title">Pabellon Criollo</h1>
+                    <p class="blog-post__text">
+                        Ingredientes 
+                        <ul>
+                            <li>1 1/2 pounds flank steak</li>
+                            <li>2 teaspoons bouillon cubes</li>
+                            <li>4 clove cloves minced garlic</li>
+                            <li>6 tablespoons vegetable oil</li>
+                            <li>1 1/2 teaspoons salt</li>
+                            <li>1 cup white rice, soaked for 20 minutes in warm water</li>
+                            <li>1 cup chopped onions (2-3 medium onions)</li>
+                            <li>1 15-ounce can black beans</li>
+                            <li>1 teaspoon chicken bouillon cube</li>
+                            <li>1 1/2 teaspoons cumin</li>
+                            <li>1/2 teaspoon garlic powder</li>
+                            <li>1 tablespoon vinegar</li>
+                            <li>2 tablespoons butter</li>
+                            <li>2 medium tomatoes, diced</li>
+                            
+                        </ul>
+                    </p>
+                    <a href="meatRecepies1.html" class="blog-post__cta">How to make it!<a>
+                </div>
+                </div>
     
+            </div>
+            <br>
+            <br>
+            <br>
+    
+            <div class="blog-post">
+                <div class="blog-post__img">
+                    <img src="copiaDeImgVnzFood/arepas-rellenas-reina-pepiada-01.jpeg" alt="arepa">
+                </div>
+                <div class="blog-post__info">
+                <div>
+                    <h1 class="blog-post__title">Areapa Reina Pepiada</h1>
+                    <p class="blog-post__text">
+                        Ingredientes 
+                        <ul>
+                            <li>2 6-ounce skinless, boneless chicken breasts</li>
+                            <li>1/2 small onion, sliced</li>
+                            <li>Salt and freshly ground black pepper</li>
+                            <li>1 ripe Hass avocado, pitted, peeled, and coarsely chopped</li>
+                            <li>1/4 cup mayonnaise</li>
+                            <li>1 tablespoon distilled white vinegar, plus more to taste</li>
+                            <li>2 tablespoons minced fresh cilantro</li>
+                            <li>2 tablespoons minced fresh parsley</li>
+                            <li>1/2 jalapeño, seeded and minced</li>
+                            <li>2 garlic cloves, minced</li>
+                            <li>1/2 cup seeded and diced (1/4-inch) red bell pepper</li>
+                            <li>2 tablespoons finely chopped red onion</li>
+                            <li>1 scallion, white and green parts, finely chopped</li>
+                        </ul>
+                    </p>
+                    <a href="meatRecepie2.html" class="blog-post__cta">How to make it!</a>
+                </div>
+                </div>
+    
+
+
+
+            </div>
+
+        </main>
+          
+
+<br>
+        <!--Footer-->
+        <footer id="footer">
+          <p class="p-footer">This web page was created by: </p> 
+          <nav class="authors">
+            <div>
+              <p class="authors-person">Anna Jaksics
+              <a href= "https://github.com/AnnaGH" >
+              <i class="fab fa-github"></i></a>
+              <a href="anna.jaksics@gmail.com">
+              <i class="fas fa-envelope"></i></a></p>
+          </div>
+            <div>
+              <p class="authors-person">Marta Gaworek
+              <a href= "https://github.com/marta05" >
+              <i class="fab fa-github"></i></a>
+              <a href="martagaworek050@gmail.com">
+              <i class="fas fa-envelope"></i></a></p>
+            </div>
+            <div>
+              <p class="authors-person">Maria del Pilar Maestre Sanchez
+              <a href = "https://github.com/Kariakito">
+              <i class="fab fa-github"></i></a>
+              <a href="pilarmaestre@gmail.com">
+              <i class="fas fa-envelope"></i></a></p>
+            </div>
+          </nav>
+        </footer>
+
+  </div> <!--this is a closing of the wrapper, don't delete-->
+    <script src="./nav-bar.js"></script>
+    <script src="newJSCarousel.js"></script>
+
 </body>
 </html>
